@@ -79,6 +79,7 @@ def checkoutTemplate(experiment, platform, target, branch="main"):
     #For testing, we want to be able to call _checkoutTemplate  without a
     #hard-coded path; for production, we want to enfocrce  a fixed dir struct
     user_checkout_dir = os.path.expanduser("~/cylc-src")
+    click.echo("user checkout dir (for production): " + user_checkout_dir)
     return _checkoutTemplate(experiment, platform, target, branch, user_checkout_dir)
 
 
